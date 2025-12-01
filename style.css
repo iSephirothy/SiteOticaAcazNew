@@ -1,11 +1,11 @@
 /* GLOBAL */
-/* 1. VARIÁVEIS CSS (Design System) - NOVO AZUL VIBRANTE */
+/* 1. VARIÁVEIS CSS (Design System) - NOVO AZUL E AMARELO VIBRANTES */
 :root {
-  /* Cores da Marca (Novo Azul mais Vibrante e Moderno) */
-  --primary-blue: #007bff; /* Azul vibrante e moderno */
-  --dark-blue: #0056b3;  /* Azul para hover e títulos fortes */
-  --light-blue: #e0f7ff; /* Azul muito claro para fundos e gradientes suaves */
-  --accent-yellow: #ffcc00;
+  /* Cores da Marca (Tons mais saturados e chamativos) */
+  --primary-blue: #0066ff; /* Azul mais elétrico e chamativo */
+  --dark-blue: #004de6;    /* Tom escuro para hover */
+  --light-blue: #e0f7ff;   /* Azul muito claro para fundos (mantido) */
+  --accent-yellow: #ffc107; /* Amarelo mais vivo e luminoso */
   --bg-primary: #f2f7ff;
   --bg-secondary: white;
   --text-color: #333;
@@ -28,7 +28,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Ajuste para o header fixo: Se você ativar o fixed no .header, este padding é NECESSÁRIO! */
+/* Ajuste para o header fixo */
 body.header-fixed-padding {
   padding-top: 85px; 
 }
@@ -43,7 +43,6 @@ body.header-fixed-padding {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  
   /* DESCOMENTE AS LINHAS ABAIXO se quiser o HEADER FIXO no topo */
   /*
   position: fixed; 
@@ -76,7 +75,6 @@ body.header-fixed-padding {
   height: 60vh;
   text-align: center;
   padding: var(--padding-section);
-  /* Novo Gradiente com azul mais claro */
   background: linear-gradient(var(--light-blue), white); 
   display: flex;
   flex-direction: column;
@@ -98,7 +96,7 @@ body.header-fixed-padding {
 /* BUTTONS */
 .btn-yellow {
   padding: 12px 25px;
-  background: var(--accent-yellow);
+  background: var(--accent-yellow); /* NOVO AMARELO MAIS VIBRANTE */
   color: #000;
   font-weight: bold;
   border-radius: var(--border-radius);
@@ -108,12 +106,12 @@ body.header-fixed-padding {
 }
 
 .btn-yellow:hover {
-  opacity: 0.8;
+  opacity: 0.9; /* Pequeno escurecimento no hover */
 }
 
 .btn-blue {
   padding: 10px 20px;
-  background: var(--primary-blue); 
+  background: var(--primary-blue); /* NOVO AZUL VIBRANTE */
   color: white;
   border: none;
   border-radius: 8px;
@@ -145,7 +143,7 @@ body.header-fixed-padding {
 }
 
 .card {
-  background: #f0f8ff; /* Fundo azul bem leve para harmonizar */
+  background: #f0f8ff; 
   border-radius: 15px;
   padding: 20px;
   text-align: center;
@@ -162,7 +160,7 @@ body.header-fixed-padding {
   height: 150px;
   width: 100%;
   object-fit: cover; 
-  background: var(--light-blue); /* Placeholder para quando não tiver imagem */
+  background: var(--light-blue); 
   border-radius: var(--border-radius);
   margin-bottom: 15px;
 }
@@ -231,7 +229,6 @@ body.header-fixed-padding {
 
 /* --- MEDIA QUERIES (RESPONSIVIDADE) --- */
 @media (max-width: 768px) {
-    /* HEADER (Menu para Celular) */
     .header {
         flex-direction: column; 
         gap: 15px; 
@@ -248,7 +245,6 @@ body.header-fixed-padding {
         font-size: 14px;
     }
     
-    /* HERO */
     .hero {
         height: auto;
         padding-top: 40px;
@@ -263,7 +259,6 @@ body.header-fixed-padding {
         font-size: 16px;
     }
 
-    /* SEÇÕES GERAIS */
     .produtos h3, .sobre h3, .contato h3 {
         font-size: 28px;
     }
@@ -272,7 +267,6 @@ body.header-fixed-padding {
          padding: 40px 15px; 
     }
 
-    /* WHATSAPP BUTTON */
     .whatsapp-button {
         bottom: 15px;
         right: 15px;
@@ -283,12 +277,10 @@ body.header-fixed-padding {
 
 /* --- ANIMAÇÕES --- */
 .fade-up {
-  /* Animação inicial de baixo para cima */
   animation: fadeUp 0.8s ease forwards;
 }
 
 .fade-down {
-  /* Animação inicial de cima para baixo (usada no header) */
   animation: fadeDown 0.8s ease forwards;
 }
 
