@@ -27,33 +27,36 @@
     <a href="#produtos" class="btn-yellow">Conheça nossos produtos</a>
   </section>
 
-  <!-- PRODUTOS -->
+  <!-- PRODUTOS + FILTRO -->
   <section id="produtos" class="produtos">
-    <h3 class="fade-up">Produtos</h3>
+    <h2>Produtos</h2>
 
-    <div class="grid">
+    <div class="filtros">
+      <button class="filtro-btn" data-filter="todos">Todos</button>
+      <button class="filtro-btn" data-filter="oculos">Óculos</button>
+      <button class="filtro-btn" data-filter="lentes">Lentes de Contato</button>
+    </div>
 
-      <div class="card fade-up">
-        <div class="img"></div>
-        <h4>Óculos Modelo 1</h4>
-        <p>Design moderno, leve e confortável.</p>
-        <button class="btn-blue">Ver detalhes</button>
+    <div class="produtos-grid">
+      <div class="produto" data-category="oculos">
+        <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083" />
+        <p>Óculos Premium</p>
       </div>
 
-      <div class="card fade-up">
-        <div class="img"></div>
-        <h4>Óculos Modelo 2</h4>
-        <p>Leve, resistente e estiloso.</p>
-        <button class="btn-blue">Ver detalhes</button>
+      <div class="produto" data-category="lentes">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" />
+        <p>Lentes de Contato Azul</p>
       </div>
 
-      <div class="card fade-up">
-        <div class="img"></div>
-        <h4>Óculos Modelo 3</h4>
-        <p>Elegância que combina com você.</p>
-        <button class="btn-blue">Ver detalhes</button>
+      <div class="produto" data-category="lentes">
+        <img src="https://images.unsplash.com/photo-1591076482161-f371f6c8a63e" />
+        <p>Lentes de Contato Verde</p>
       </div>
 
+      <div class="produto" data-category="oculos">
+        <img src="https://images.unsplash.com/photo-1526948128573-703ee1aeb6fa" />
+        <p>Óculos Masculino</p>
+      </div>
     </div>
   </section>
 
@@ -75,10 +78,8 @@
     <button class="btn">Enviar Mensagem</button>
   </section>
 
-  <!-- WHATSAPP FLOATING BUTTON -->
-  <a href="https://wa.me/+55(11) 95810-3641" target="_blank" class="whatsapp-button">
-    💬
-  </a>
+  <!-- BOTÃO WHATSAPP FIXO -->
+  <a href="https://wa.me/5511958103641" class="whatsapp" target="_blank">💬</a>
 
   <!-- FOOTER -->
   <footer class="footer">
