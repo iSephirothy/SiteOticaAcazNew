@@ -15,6 +15,7 @@
 
 <body class="header-pad">
 
+  <!-- HEADER -->
   <header class="header">
     <h1 class="logo">Ótica Acaz</h1>
     <nav>
@@ -25,36 +26,63 @@
     </nav>
   </header>
 
+  <!-- HERO -->
   <section id="home" class="hero">
     <h2>Enxergue o mundo com <span class="highlight">estilo</span></h2>
     <p>As melhores armações, lentes e atendimento personalizado para você ver e ser visto.</p>
     <a href="#produtos" class="btn-yellow">Conheça nossos produtos</a>
   </section>
 
+  <!-- PRODUTOS COM FILTRO -->
   <section id="produtos" class="produtos">
     <h3>Produtos</h3>
+
+    <!-- BOTÕES DE FILTRO -->
+    <div class="filter-bar">
+      <button class="btn-filter active" data-filter="all">Todos</button>
+      <button class="btn-filter" data-filter="grau-m">Grau Masculino</button>
+      <button class="btn-filter" data-filter="grau-f">Grau Feminino</button>
+      <button class="btn-filter" data-filter="sol">Óculos de Sol</button>
+      <button class="btn-filter" data-filter="contato">Lentes de Contato</button>
+    </div>
+
+    <!-- GRADE DE CARDS -->
     <div class="grid">
-      <div class="card">
-        <img src="caminho/para/imagem1.jpg" alt="Óculos de grau moderno" class="img-produto">
-        <h4>Óculos Modelo 1</h4>
-        <p>Design moderno, leve e confortável.</p>
+      <!-- Grau Masculino -->
+      <div class="card" data-cat="grau-m">
+        <img src="img/grau-m-1.jpg" alt="Grau Masculino" class="img-produto">
+        <h4>Óculos Masculino 001</h4>
+        <p>Design urbano e sofisticado.</p>
         <button class="btn-blue">Ver detalhes</button>
       </div>
-      <div class="card">
-        <img src="caminho/para/imagem2.jpg" alt="Óculos de sol esportivo" class="img-produto">
-        <h4>Óculos Modelo 2</h4>
-        <p>Leve, resistente e estiloso.</p>
+
+      <!-- Grau Feminino -->
+      <div class="card" data-cat="grau-f">
+        <img src="img/grau-f-1.jpg" alt="Grau Feminino" class="img-produto">
+        <h4>Óculos Feminino 002</h4>
+        <p>Leveza e elegância em um só aro.</p>
         <button class="btn-blue">Ver detalhes</button>
       </div>
-      <div class="card">
-        <img src="caminho/para/imagem3.jpg" alt="Armação estilo gatinho" class="img-produto">
-        <h4>Óculos Modelo 3</h4>
-        <p>Elegância que combina com você.</p>
+
+      <!-- Sol -->
+      <div class="card" data-cat="sol">
+        <img src="img/sol-1.jpg" alt="Óculos de Sol" class="img-produto">
+        <h4>Óculos de Sol 003</h4>
+        <p>Lentes polarizadas com 100% de proteção UV.</p>
+        <button class="btn-blue">Ver detalhes</button>
+      </div>
+
+      <!-- Contato -->
+      <div class="card" data-cat="contato">
+        <img src="img/contato-1.jpg" alt="Lentes de Contato" class="img-produto">
+        <h4>Lentes de Contato 004</h4>
+        <p>Conforto o dia todo, cores vibrantes.</p>
         <button class="btn-blue">Ver detalhes</button>
       </div>
     </div>
   </section>
 
+  <!-- SOBRE -->
   <section id="sobre" class="sobre">
     <h3>Sobre Nós</h3>
     <p>
@@ -63,6 +91,7 @@
     </p>
   </section>
 
+  <!-- CONTATO -->
   <section id="contato" class="contato">
     <h3>Contato</h3>
     <p>📍 Rua Dr Flaquer, 209 - São Bernardo Do Campo - SP</p>
@@ -71,11 +100,74 @@
     <button class="btn-blue">Enviar Mensagem</button>
   </section>
 
+  <!-- DEPOIMENTOS (CARROSSEL CSS) -->
+  <section class="depoimentos">
+    <h3>O que falam de nós</h3>
+    <div class="carousel">
+      <div class="carousel-track">
+        <blockquote class="testimonial">
+          <p>“Atendimento impecável e armações lindas!”</p>
+          <cite>— Amanda, cliente desde 2021</cite>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p>“Consegui a lente ideal para o meu grau elevado.”</p>
+          <cite>— Carlos, São Bernardo</cite>
+        </blockquote>
+
+        <blockquote class="testimonial">
+          <p>“Entrega rápida e preço justo. Super recomendo!”</p>
+          <cite>— Fernanda, ABC</cite>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHATSAPP FLOAT -->
   <a href="https://wa.me/5511958103641" target="_blank" class="whatsapp-button">💬</a>
 
+  <!-- FOOTER + REDES SOCIAIS -->
   <footer class="footer">
-    © 2025 Ótica Acaz - Todos os direitos reservados.
+    <p>© 2025 Ótica Acaz - Todos os direitos reservados.</p>
+
+    <div class="social-bar">
+      <a href="https://facebook.com"  aria-label="Facebook"  class="social-icon" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://instagram.com" aria-label="Instagram" class="social-icon" target="_blank">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+      </a>
+      <a href="https://wa.me/5511958103641" aria-label="WhatsApp" class="social-icon" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1-8.4-4.5l-1 3.7 3.8-1A10 10 0 0 1 12 2zm5.6 13.8c-.2.9-1.1 1.5-2.1 1.6-1 .1-2.3.5-7.4-3.3-5.4-3.9-5-6.6-5-7.1 0-.5.3-1 .9-1.3.5-.2.9-.1 1.3.1l1.5.8c.3.1.5.4.5.7s0 .6-.2 1c-.2.4-.4.7-.6.9l-.3.3c-.1.1-.1.2 0 .3s.2.3.3.4c.2.1.4.3.6.5.8.7 1.4 1.2 2.5 1.9.3.2.6.3.8.4l.6.2c.3.1.6.1.8 0s.5-.4.7-.6c.2-.3.4-.5.7-.6s.6-.1.9 0l2.5 1.2c.3.1.5.4.5.7z"/></svg>
+      </a>
+      <a href="https://twitter.com"  aria-label="Twitter"  class="social-icon" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.1 1.1 5.5 5.5 0 0 0-9.5 3.8A5.6 5.6 0 0 0 4 9.4a11.1 11.1 0 0 1-8 4 5.5 5.5 0 0 0 2.5 3.3 5.5 5.5 0 0 1-2.5-.7v.1a5.6 5.6 0 0 0 4.4 5.5 5.5 5.5 0 0 1-1.4.2 5.3 5.3 0 0 1-1-.1 5.5 5.5 0 0 0 5.1 3.8A11 11 0 0 1 1 20.2 15.4 15.4 0 0 0 8.3 22c9.9 0 15.3-8.2 15.3-15.3v-.7A11 11 0 0 0 23 3z"/></svg>
+      </a>
+    </div>
   </footer>
+
+  <!-- SCRIPT DO FILTRO -->
+  <script>
+    const buttons = document.querySelectorAll('.btn-filter');
+    const cards   = document.querySelectorAll('.card');
+
+    buttons.forEach(btn =>
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        cards.forEach(card => {
+          const cat = card.dataset.cat;
+          if (filter === 'all' || cat === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      })
+    );
+  </script>
 
 </body>
 </html>
