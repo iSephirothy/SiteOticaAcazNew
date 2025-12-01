@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ótica Acaz</title>
-
+  <title>Ótica ACAZ – Sua Visão com Estilo</title>
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
+  <!-- Ícone na aba -->
+  <link rel="icon" href="favicon.ico">
 </head>
 
 <body class="header-pad">
 
-  <!-- HEADER -->
+  <!-- HEADER  -->
   <header class="header">
-    <h1 class="logo">Ótica Acaz</h1>
+    <h1 class="logo">ÓTICA <span class="acaz">ACAZ</span></h1>
     <nav>
       <a href="#home">Início</a>
       <a href="#produtos">Produtos</a>
@@ -26,18 +26,17 @@
     </nav>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO  -->
   <section id="home" class="hero">
     <h2>Enxergue o mundo com <span class="highlight">estilo</span></h2>
     <p>As melhores armações, lentes e atendimento personalizado para você ver e ser visto.</p>
     <a href="#produtos" class="btn-yellow">Conheça nossos produtos</a>
   </section>
 
-  <!-- PRODUTOS COM FILTRO -->
+  <!-- PRODUTOS COM FILTRO  -->
   <section id="produtos" class="produtos">
     <h3>Produtos</h3>
 
-    <!-- BOTÕES DE FILTRO -->
     <div class="filter-bar">
       <button class="btn-filter active" data-filter="all">Todos</button>
       <button class="btn-filter" data-filter="grau-m">Grau Masculino</button>
@@ -46,9 +45,7 @@
       <button class="btn-filter" data-filter="contato">Lentes de Contato</button>
     </div>
 
-    <!-- GRADE DE CARDS -->
     <div class="grid">
-      <!-- Grau Masculino -->
       <div class="card" data-cat="grau-m">
         <img src="img/grau-m-1.jpg" alt="Grau Masculino" class="img-produto">
         <h4>Óculos Masculino 001</h4>
@@ -56,7 +53,6 @@
         <button class="btn-blue">Ver detalhes</button>
       </div>
 
-      <!-- Grau Feminino -->
       <div class="card" data-cat="grau-f">
         <img src="img/grau-f-1.jpg" alt="Grau Feminino" class="img-produto">
         <h4>Óculos Feminino 002</h4>
@@ -64,7 +60,6 @@
         <button class="btn-blue">Ver detalhes</button>
       </div>
 
-      <!-- Sol -->
       <div class="card" data-cat="sol">
         <img src="img/sol-1.jpg" alt="Óculos de Sol" class="img-produto">
         <h4>Óculos de Sol 003</h4>
@@ -72,7 +67,6 @@
         <button class="btn-blue">Ver detalhes</button>
       </div>
 
-      <!-- Contato -->
       <div class="card" data-cat="contato">
         <img src="img/contato-1.jpg" alt="Lentes de Contato" class="img-produto">
         <h4>Lentes de Contato 004</h4>
@@ -82,7 +76,7 @@
     </div>
   </section>
 
-  <!-- SOBRE -->
+  <!-- SOBRE  -->
   <section id="sobre" class="sobre">
     <h3>Sobre Nós</h3>
     <p>
@@ -91,44 +85,42 @@
     </p>
   </section>
 
-  <!-- CONTATO -->
+  <!-- CONTATO  -->
   <section id="contato" class="contato">
     <h3>Contato</h3>
-    <p>📍 Rua Dr Flaquer, 209 - São Bernardo Do Campo - SP</p>
+    <p>📍 Rua Dr Flaquer, 209 - São Bernardo do Campo - SP</p>
     <p><a href="tel:+5511958103641">📞 (11) 95810-3641</a></p>
     <p><a href="mailto:contato@oticacaz.com">📧 contato@oticacaz.com</a></p>
     <button class="btn-blue">Enviar Mensagem</button>
   </section>
 
-  <!-- DEPOIMENTOS (CARROSSEL CSS) -->
+  <!-- DEPOIMENTOS  -->
   <section class="depoimentos">
     <h3>O que falam de nós</h3>
     <div class="carousel">
       <div class="carousel-track">
         <blockquote class="testimonial">
           <p>“Atendimento impecável e armações lindas!”</p>
-          <cite>— Amanda, cliente desde 2021</cite>
+          <cite class="autor-amarelo">— Amanda, cliente desde 2021</cite>
         </blockquote>
-
         <blockquote class="testimonial">
           <p>“Consegui a lente ideal para o meu grau elevado.”</p>
-          <cite>— Carlos, São Bernardo</cite>
+          <cite class="autor-amarelo">— Carlos, São Bernardo</cite>
         </blockquote>
-
         <blockquote class="testimonial">
           <p>“Entrega rápida e preço justo. Super recomendo!”</p>
-          <cite>— Fernanda, ABC</cite>
+          <cite class="autor-amarelo">— Fernanda, ABC</cite>
         </blockquote>
       </div>
     </div>
   </section>
 
-  <!-- WHATSAPP FLOAT -->
+  <!-- WHATSAPP FLOAT  -->
   <a href="https://wa.me/5511958103641" target="_blank" class="whatsapp-button">💬</a>
 
-  <!-- FOOTER + REDES SOCIAIS -->
+  <!-- FOOTER + REDES  -->
   <footer class="footer">
-    <p>© 2025 Ótica Acaz - Todos os direitos reservados.</p>
+    <p>© 2025 ÓTICA <span class="acaz">ACAZ</span> - Todos os direitos reservados.</p>
 
     <div class="social-bar">
       <a href="https://facebook.com"  aria-label="Facebook"  class="social-icon" target="_blank">
@@ -140,13 +132,14 @@
       <a href="https://wa.me/5511958103641" aria-label="WhatsApp" class="social-icon" target="_blank">
         <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1-8.4-4.5l-1 3.7 3.8-1A10 10 0 0 1 12 2zm5.6 13.8c-.2.9-1.1 1.5-2.1 1.6-1 .1-2.3.5-7.4-3.3-5.4-3.9-5-6.6-5-7.1 0-.5.3-1 .9-1.3.5-.2.9-.1 1.3.1l1.5.8c.3.1.5.4.5.7s0 .6-.2 1c-.2.4-.4.7-.6.9l-.3.3c-.1.1-.1.2 0 .3s.2.3.3.4c.2.1.4.3.6.5.8.7 1.4 1.2 2.5 1.9.3.2.6.3.8.4l.6.2c.3.1.6.1.8 0s.5-.4.7-.6c.2-.3.4-.5.7-.6s.6-.1.9 0l2.5 1.2c.3.1.5.4.5.7z"/></svg>
       </a>
-      <a href="https://twitter.com"  aria-label="Twitter"  class="social-icon" target="_blank">
-        <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.1 1.1 5.5 5.5 0 0 0-9.5 3.8A5.6 5.6 0 0 0 4 9.4a11.1 11.1 0 0 1-8 4 5.5 5.5 0 0 0 2.5 3.3 5.5 5.5 0 0 1-2.5-.7v.1a5.6 5.6 0 0 0 4.4 5.5 5.5 5.5 0 0 1-1.4.2 5.3 5.3 0 0 1-1-.1 5.5 5.5 0 0 0 5.1 3.8A11 11 0 0 1 1 20.2 15.4 15.4 0 0 0 8.3 22c9.9 0 15.3-8.2 15.3-15.3v-.7A11 11 0 0 0 23 3z"/></svg>
+      <!-- ÍCONE DO “X” (Twitter) -->
+      <a href="https://x.com" aria-label="X / Twitter" class="social-icon" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M18.9 1.2H22.6L14.9 10.4 24 22.8h-6.3l-6.1-8-7 8H1.5l8.8-10.2L0 1.2h6.5l5.5 7.3 6.4-7.3zm-1.8 20.2h3.5L7.5 3.4H3.8l13.3 18z"/></svg>
       </a>
     </div>
   </footer>
 
-  <!-- SCRIPT DO FILTRO -->
+  <!-- SCRIPT DO FILTRO  -->
   <script>
     const buttons = document.querySelectorAll('.btn-filter');
     const cards   = document.querySelectorAll('.card');
