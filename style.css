@@ -1,8 +1,8 @@
 /*========= DESIGN SYSTEM =========*/
 :root{
-  --azul-royal: #0052f0;   /* vibrante */
+  --azul-royal: #0052f0;
   --azul-royal-dark: #0039b5;
-  --amarelo-ouro: #ffcc00; /* vibrante */
+  --amarelo-ouro: #ffcc00;
   --amarelo-ouro-dark: #e6b800;
   --cinza-900: #111;
   --cinza-100: #f5f7fa;
@@ -110,7 +110,7 @@ nav a:hover{color: var(--azul-royal)}
 }
 .btn-blue:hover{background: var(--azul-royal-dark)}
 
-/*========= PRODUTOS =========*/
+/*========= PRODUTOS & FILTROS =========*/
 .produtos{padding: 4rem 1rem}
 .produtos h3{
   font-family: var(--ff-display);
@@ -118,6 +118,28 @@ nav a:hover{color: var(--azul-royal)}
   text-align: center;
   margin-bottom: 2.5rem;
   color: var(--azul-royal);
+}
+.filter-bar{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.5rem;
+  margin-bottom:2rem;
+}
+.btn-filter{
+  padding:.5rem 1rem;
+  border:2px solid var(--azul-royal);
+  background:transparent;
+  color:var(--azul-royal);
+  border-radius:50px;
+  font-weight:600;
+  cursor:pointer;
+  transition:background var(--transition), color var(--transition);
+}
+.btn-filter:hover,
+.btn-filter.active{
+  background:var(--azul-royal);
+  color:#fff;
 }
 .grid{
   display: grid;
@@ -149,6 +171,7 @@ nav a:hover{color: var(--azul-royal)}
 }
 .card h4{font-weight: 700}
 .card p{flex: 1}
+.card.hidden{display:none}
 
 /*========= SOBRE / CONTATO =========*/
 .sobre, .contato{
@@ -164,6 +187,51 @@ nav a:hover{color: var(--azul-royal)}
   color: var(--azul-royal);
 }
 .contato a:hover{color: var(--azul-royal)}
+
+/*========= DEPOIMENTOS (CARROSSEL) =========*/
+.depoimentos{
+  padding:4rem 1rem;
+  text-align:center;
+  overflow:hidden;
+}
+.depoimentos h3{
+  font-family:var(--ff-display);
+  font-size:2rem;
+  margin-bottom:2rem;
+  color:var(--azul-royal);
+}
+.carousel{
+  position:relative;
+  max-width:700px;
+  margin:auto;
+}
+.carousel-track{
+  display:flex;
+  width:300%;
+  animation: slide 12s infinite ease-in-out;
+}
+.testimonial{
+  flex:0 0 33.333%;
+  padding:1.5rem;
+  background:#fff;
+  border-radius:var(--radius);
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+  margin:0 .5rem;
+}
+.testimonial p{
+  font-style:italic;
+  margin-bottom:.5rem;
+}
+cite{
+  font-weight:700;
+  color:var(--azul-royal);
+}
+@keyframes slide{
+  0%, 27%   {transform:translateX(0)}
+  33%, 60%  {transform:translateX(-33.333%)}
+  66%, 93%  {transform:translateX(-66.666%)}
+  100%      {transform:translateX(0)}
+}
 
 /*========= WHATSAPP FLOAT =========*/
 .whatsapp-button{
@@ -183,7 +251,7 @@ nav a:hover{color: var(--azul-royal)}
 }
 .whatsapp-button:hover{transform: scale(1.1)}
 
-/*========= FOOTER =========*/
+/*========= FOOTER + REDES SOCIAIS =========*/
 .footer{
   text-align: center;
   padding: 1.5rem;
@@ -191,6 +259,25 @@ nav a:hover{color: var(--azul-royal)}
   color: var(--cinza-900);
   background: #fff;
   border-top: 1px solid rgba(0,0,0,.05);
+}
+.social-bar{
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  margin-top:1rem;
+}
+.social-icon{
+  width:38px;
+  height:38px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
+  color:var(--azul-royal);
+  transition:transform var(--transition), color var(--transition);
+}
+.social-icon:hover{
+  transform:scale(1.2);
+  color:var(--amarelo-ouro);
 }
 
 /*========= RESPONSIVO =========*/
