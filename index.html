@@ -4,15 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ótica ACAZ – Sua Visão com Estilo</title>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Ícone na aba -->
   <link rel="icon" href="favicon.ico">
 </head>
 
 <body class="header-pad">
 
+  <!-- HEADER  -->
   <header class="header">
     <h1 class="logo">ÓTICA <span class="acaz">ACAZ</span></h1>
     <nav>
@@ -23,13 +26,14 @@
     </nav>
   </header>
 
+  <!-- HERO  -->
   <section id="home" class="hero">
     <h2>Enxergue o mundo com <span class="highlight">estilo</span></h2>
-    <p>As melhores armações, lentes e atendimento personalizado.</p>
-    <a href="#produtos" class="btn-yellow">Ver produtos</a>
+    <p>As melhores armações, lentes e atendimento personalizado para você ver e ser visto.</p>
+    <a href="#produtos" class="btn-yellow">Conheça nossos produtos</a>
   </section>
 
-  <!-- ===== PRODUTOS + SUB-FILTRO ===== -->
+  <!-- PRODUTOS COM FILTRO  -->
   <section id="produtos" class="produtos">
     <h3>Produtos</h3>
 
@@ -41,110 +45,53 @@
       <button class="btn-filter" data-filter="contato">Lentes de Contato</button>
     </div>
 
-    <!-- SUB-FILTRO MODELO (escondido por padrão) -->
-    <div id="subModelos" class="sub-filter hidden">
-      <p class="sub-title">Modelos</p>
-      <button class="btn-sub" data-model="gatinho">Gatinho</button>
-      <button class="btn-sub" data-model="redondo">Redondo</button>
-      <button class="btn-sub" data-model="piloto">Piloto</button>
-      <button class="btn-sub" data-model="retangular">Retangular</button>
-      <button class="btn-sub" data-model="quadrado">Quadrado</button>
-      <button class="btn-sub" data-model="irregular">Irregular</button>
-    </div>
-
-    <!-- GRADE DE CARDS -->
     <div class="grid">
-      <!-- Grau Masculino – Gatinho -->
-      <div class="card" data-cat="grau-m" data-model="gatinho">
-        <img src="img/grau-m-gatinho.jpg" alt="Gatinho" class="img-produto">
-        <h4>Óculos Masculino – Gatinho</h4>
-        <p>Armação acetato, design vintage.</p>
-        <button class="btn-blue">Ver detalhes</button>
-      </div>
-      <div class="card" data-cat="grau-m" data-model="redondo">
-        <img src="img/grau-m-redondo.jpg" alt="Redondo" class="img-produto">
-        <h4>Óculos Masculino – Redondo</h4>
-        <p>Estilo retrô moderno.</p>
-        <button class="btn-blue">Ver detalhes</button>
-      </div>
-      <div class="card" data-cat="grau-m" data-model="piloto">
-        <img src="img/grau-m-piloto.jpg" alt="Piloto" class="img-produto">
-        <h4>Óculos Masculino – Piloto</h4>
-        <p>Metal leve, desportivo.</p>
+      <div class="card" data-cat="grau-m">
+        <img src="img/grau-m-1.jpg" alt="Grau Masculino" class="img-produto">
+        <h4>Óculos Masculino 001</h4>
+        <p>Design urbano e sofisticado.</p>
         <button class="btn-blue">Ver detalhes</button>
       </div>
 
-      <!-- Grau Feminino – Gatinho -->
-      <div class="card" data-cat="grau-f" data-model="gatinho">
-        <img src="img/grau-f-gatinho.jpg" alt="Gatinho" class="img-produto">
-        <h4>Óculos Feminino – Gatinho</h4>
-        <p>Elegância atemporal.</p>
-        <button class="btn-blue">Ver detalhes</button>
-      </div>
-      <div class="card" data-cat="grau-f" data-model="retangular">
-        <img src="img/grau-f-retangular.jpg" alt="Retangular" class="img-produto">
-        <h4>Óculos Feminino – Retangular</h4>
-        <p>Líneas minimalistas.</p>
+      <div class="card" data-cat="grau-f">
+        <img src="img/grau-f-1.jpg" alt="Grau Feminino" class="img-produto">
+        <h4>Óculos Feminino 002</h4>
+        <p>Leveza e elegância em um só aro.</p>
         <button class="btn-blue">Ver detalhes</button>
       </div>
 
-      <!-- Sol -->
-      <div class="card" data-cat="sol" data-model="quadrado">
-        <img src="img/sol-quadrado.jpg" alt="Quadrado" class="img-produto">
-        <h4>Óculos de Sol – Quadrado</h4>
-        <p>Lentes polarizadas UV400.</p>
+      <div class="card" data-cat="sol">
+        <img src="img/sol-1.jpg" alt="Óculos de Sol" class="img-produto">
+        <h4>Óculos de Sol 003</h4>
+        <p>Lentes polarizadas com 100% de proteção UV.</p>
         <button class="btn-blue">Ver detalhes</button>
       </div>
 
-      <!-- Contato -->
       <div class="card" data-cat="contato">
-        <img src="img/contato-colorida.jpg" alt="Lentes" class="img-produto">
-        <h4>Lentes de Contato Coloridas</h4>
-        <p>Conforto 12h, cores vivas.</p>
+        <img src="img/contato-1.jpg" alt="Lentes de Contato" class="img-produto">
+        <h4>Lentes de Contato 004</h4>
+        <p>Conforto o dia todo, cores vibrantes.</p>
         <button class="btn-blue">Ver detalhes</button>
       </div>
     </div>
   </section>
 
-  <!-- ===== SOBRE COMPLETO ===== -->
+  <!-- SOBRE  -->
   <section id="sobre" class="sobre">
-    <h3>Sobre nós</h3>
-
-    <div class="sobre-grid">
-      <div class="sobre-item">
-        <h4>Missão</h4>
-        <p>Oferecer saúde visual e autoestilo através de produtos e serviços com tecnologia de ponta.</p>
-      </div>
-
-      <div class="sobre-item">
-        <h4>Visão</h4>
-        <p>Ser a ótica mais inovadora do ABC, reconhecida pelo cuidado humano e excelência técnica.</p>
-      </div>
-
-      <div class="sobre-item">
-        <h4>Valores</h4>
-        <ul>
-          <li>Transparência nos preços e prazos</li>
-          <li>Sustentabilidade – reciclamos lentes e armações</li>
-          <li>Garantia vitalícia em ajustes e revisões</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="sobre-extra">
-      <h4>Nosso Laboratório</h4>
-      <p>Corte digital de lentes em até 30 minutos com tecnologia topo de gama (Saturn 3 da Coburn).  
-         Transparência nas gravações ao vivo no Instagram <span class="highlight">@oticaacaz</span>.</p>
-    </div>
+    <h3>Sobre Nós</h3>
+    <p>
+      Somos uma ótica especializada em cuidar da sua visão com profissionalismo, carinho e tecnologia desde <span class="highlight">1976</span>.
+      Oferecemos atendimento personalizado, laboratório próprio e uma seleção incrível de armações e lentes.
+    </p>
   </section>
 
   <!-- CONTATO  -->
   <section id="contato" class="contato">
     <h3>Contato</h3>
-    <p>📍 Rua Dr Flaquer, 209 – São Bernardo do Campo – SP</p>
+    <p>📍 Rua Dr Flaquer, 209 - São Bernardo do Campo - SP</p>
     <p><a href="tel:+5511958103641">📞 (11) 95810-3641</a></p>
     <p><a href="mailto:contato@oticacaz.com">📧 contato@oticacaz.com</a></p>
-    <button class="btn-blue">Enviar mensagem</button>
+    <button class="btn-blue">Enviar Mensagem</button>
   </section>
 
   <!-- DEPOIMENTOS  -->
@@ -152,9 +99,18 @@
     <h3>O que falam de nós</h3>
     <div class="carousel">
       <div class="carousel-track">
-        <blockquote class="testimonial"><p>“Atendimento impecável e armações lindas!”</p><cite class="autor-amarelo">— Amanda</cite></blockquote>
-        <blockquote class="testimonial"><p>“Consegui minha lente ideal em 15 minutos.”</p><cite class="autor-amarelo">— Carlos</cite></blockquote>
-        <blockquote class="testimonial"><p>“Preço justo e garantia de verdade!”</p><cite class="autor-amarelo">— Fernanda</cite></blockquote>
+        <blockquote class="testimonial">
+          <p>“Atendimento impecável e armações lindas!”</p>
+          <cite class="autor-amarelo">— Amanda, cliente desde 2021</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>“Consegui a lente ideal para o meu grau elevado.”</p>
+          <cite class="autor-amarelo">— Carlos, São Bernardo</cite>
+        </blockquote>
+        <blockquote class="testimonial">
+          <p>“Entrega rápida e preço justo. Super recomendo!”</p>
+          <cite class="autor-amarelo">— Fernanda, ABC</cite>
+        </blockquote>
       </div>
     </div>
   </section>
@@ -162,69 +118,48 @@
   <!-- WHATSAPP FLOAT  -->
   <a href="https://wa.me/5511958103641" target="_blank" class="whatsapp-button">💬</a>
 
-  <!-- FOOTER  -->
+  <!-- FOOTER + REDES  -->
   <footer class="footer">
-    <p>© 2025 ÓTICA <span class="acaz">ACAZ</span> – Todos os direitos reservados.</p>
+    <p>© 2025 ÓTICA <span class="acaz">ACAZ</span> - Todos os direitos reservados.</p>
+
     <div class="social-bar">
-      <a href="https://facebook.com"  class="social-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
-      <a href="https://instagram.com" class="social-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></a>
-      <a href="https://wa.me/5511958103641" class="social-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1-8.4-4.5l-1 3.7 3.8-1A10 10 0 0 1 12 2zm5.6 13.8c-.2.9-1.1 1.5-2.1 1.6-1 .1-2.3.5-7.4-3.3-5.4-3.9-5-6.6-5-7.1 0-.5.3-1 .9-1.3.5-.2.9-.1 1.3.1l1.5.8c.3.1.5.4.5.7s0 .6-.2 1c-.2.4-.4.7-.6.9l-.3.3c-.1.1-.1.2 0 .3s.2.3.3.4c.2.1.4.3.6.5.8.7 1.4 1.2 2.5 1.9.3.2.6.3.8.4l.6.2c.3.1.6.1.8 0s.5-.4.7-.6c.2-.3.4-.5.7-.6s.6-.1.9 0l2.5 1.2c.3.1.5.4.5.7z"/></svg></a>
-      <a href="https://x.com" class="social-icon"><svg viewBox="0 0 24 24"><path d="M18.9 1.2H22.6L14.9 10.4 24 22.8h-6.3l-6.1-8-7 8H1.5l8.8-10.2L0 1.2h6.5l5.5 7.3 6.4-7.3zm-1.8 20.2h3.5L7.5 3.4H3.8l13.3 18z"/></svg></a>
+      <a href="https://facebook.com"  aria-label="Facebook"  class="social-icon" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href="https://instagram.com" aria-label="Instagram" class="social-icon" target="_blank">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+      </a>
+      <a href="https://wa.me/5511958103641" aria-label="WhatsApp" class="social-icon" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 0 20 10 10 0 0 1-8.4-4.5l-1 3.7 3.8-1A10 10 0 0 1 12 2zm5.6 13.8c-.2.9-1.1 1.5-2.1 1.6-1 .1-2.3.5-7.4-3.3-5.4-3.9-5-6.6-5-7.1 0-.5.3-1 .9-1.3.5-.2.9-.1 1.3.1l1.5.8c.3.1.5.4.5.7s0 .6-.2 1c-.2.4-.4.7-.6.9l-.3.3c-.1.1-.1.2 0 .3s.2.3.3.4c.2.1.4.3.6.5.8.7 1.4 1.2 2.5 1.9.3.2.6.3.8.4l.6.2c.3.1.6.1.8 0s.5-.4.7-.6c.2-.3.4-.5.7-.6s.6-.1.9 0l2.5 1.2c.3.1.5.4.5.7z"/></svg>
+      </a>
+      <!-- ÍCONE DO “X” (Twitter) -->
+      <a href="https://x.com" aria-label="X / Twitter" class="social-icon" target="_blank">
+        <svg viewBox="0 0 24 24"><path d="M18.9 1.2H22.6L14.9 10.4 24 22.8h-6.3l-6.1-8-7 8H1.5l8.8-10.2L0 1.2h6.5l5.5 7.3 6.4-7.3zm-1.8 20.2h3.5L7.5 3.4H3.8l13.3 18z"/></svg>
+      </a>
     </div>
   </footer>
 
-  <!-- SCRIPT FILTRO + SUB-FILTRO -->
+  <!-- SCRIPT DO FILTRO  -->
   <script>
-    const btnFilter = document.querySelectorAll('.btn-filter');
-    const btnSub    = document.querySelectorAll('.btn-sub');
-    const cards     = document.querySelectorAll('.card');
-    const subBox    = document.getElementById('subModelos');
+    const buttons = document.querySelectorAll('.btn-filter');
+    const cards   = document.querySelectorAll('.card');
 
-    // mostra/esconde sub-filtro
-    btnFilter.forEach(btn => btn.addEventListener('click', () => {
-      btnFilter.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
+    buttons.forEach(btn =>
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
 
-      // exibe sub-filtro só para grau-m / grau-f
-      if (filter === 'grau-m' || filter === 'grau-f') {
-        subBox.classList.remove('hidden');
-        subBox.dataset.parent = filter;
-      } else {
-        subBox.classList.add('hidden');
-      }
-
-      // filtro geral
-      cards.forEach(card => {
-        const cat = card.dataset.cat;
-        if (filter === 'all' || cat === filter) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-
-      // limpa seleção de modelo
-      btnSub.forEach(b => b.classList.remove('active'));
-    }));
-
-    // sub-filtro de modelos
-    btnSub.forEach(btn => btn.addEventListener('click', () => {
-      btnSub.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const model   = btn.dataset.model;
-      const parent  = subBox.dataset.parent;
-
-      cards.forEach(card => {
-        const cat   = card.dataset.cat;
-        const mdl   = card.dataset.model;
-        if (cat === parent && mdl === model) {
-          card.classList.remove('hidden');
-        } else if (cat !== parent) {
-          card.classList.add('hidden');
-        }
-      });
-    }));
+        cards.forEach(card => {
+          const cat = card.dataset.cat;
+          if (filter === 'all' || cat === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      })
+    );
   </script>
 
 </body>
