@@ -1,10 +1,10 @@
 /* GLOBAL */
-/* 1. VARIÁVEIS CSS (Design System) */
+/* 1. VARIÁVEIS CSS (Design System) - NOVO AZUL VIBRANTE */
 :root {
-  /* Cores da Marca */
-  --primary-blue: #0054a6;
-  --dark-blue: #004a94;
-  --light-blue: #c6e2ff; 
+  /* Cores da Marca (Novo Azul mais Vibrante e Moderno) */
+  --primary-blue: #007bff; /* Azul vibrante e moderno */
+  --dark-blue: #0056b3;  /* Azul para hover e títulos fortes */
+  --light-blue: #e0f7ff; /* Azul muito claro para fundos e gradientes suaves */
   --accent-yellow: #ffcc00;
   --bg-primary: #f2f7ff;
   --bg-secondary: white;
@@ -28,9 +28,9 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Ajuste para o header fixo: Adicione padding ao body para o conteúdo não ser escondido */
+/* Ajuste para o header fixo: Se você ativar o fixed no .header, este padding é NECESSÁRIO! */
 body.header-fixed-padding {
-  padding-top: 85px; /* Ajuste este valor se a altura do header mudar */
+  padding-top: 85px; 
 }
 
 
@@ -43,11 +43,14 @@ body.header-fixed-padding {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  /* Se for fixo, descomente as linhas abaixo no CSS e adicione a classe no HTML */
-  /* position: fixed; 
+  
+  /* DESCOMENTE AS LINHAS ABAIXO se quiser o HEADER FIXO no topo */
+  /*
+  position: fixed; 
   top: 0;
   left: 0;
-  z-index: 1000; */
+  z-index: 1000;
+  */
 }
 
 .header nav a {
@@ -73,7 +76,8 @@ body.header-fixed-padding {
   height: 60vh;
   text-align: center;
   padding: var(--padding-section);
-  background: linear-gradient(var(--light-blue), white);
+  /* Novo Gradiente com azul mais claro */
+  background: linear-gradient(var(--light-blue), white); 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -81,7 +85,7 @@ body.header-fixed-padding {
 
 .hero h2 {
   font-size: 40px;
-  color: var(--dark-blue);
+  color: var(--dark-blue); 
   margin-bottom: 10px;
 }
 
@@ -109,7 +113,7 @@ body.header-fixed-padding {
 
 .btn-blue {
   padding: 10px 20px;
-  background: var(--primary-blue);
+  background: var(--primary-blue); 
   color: white;
   border: none;
   border-radius: 8px;
@@ -118,7 +122,7 @@ body.header-fixed-padding {
 }
 
 .btn-blue:hover {
-  background: var(--dark-blue);
+  background: var(--dark-blue); 
 }
 
 /* PRODUTOS */
@@ -129,7 +133,7 @@ body.header-fixed-padding {
 
 .produtos h3 {
   text-align: center;
-  color: var(--primary-blue);
+  color: var(--primary-blue); 
   font-size: 32px;
   margin-bottom: 30px;
 }
@@ -141,7 +145,7 @@ body.header-fixed-padding {
 }
 
 .card {
-  background: #e6f0ff; /* Manteve a cor azul clara do card */
+  background: #f0f8ff; /* Fundo azul bem leve para harmonizar */
   border-radius: 15px;
   padding: 20px;
   text-align: center;
@@ -154,9 +158,11 @@ body.header-fixed-padding {
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-.card .img { /* Mantive a classe .img, mas você deve usar <img> */
+.card .img-produto {
   height: 150px;
-  background: #b5cfff;
+  width: 100%;
+  object-fit: cover; 
+  background: var(--light-blue); /* Placeholder para quando não tiver imagem */
   border-radius: var(--border-radius);
   margin-bottom: 15px;
 }
@@ -169,7 +175,7 @@ body.header-fixed-padding {
 
 .sobre h3 {
   font-size: 32px;
-  color: var(--primary-blue);
+  color: var(--primary-blue); 
   margin-bottom: 20px;
 }
 
@@ -180,7 +186,7 @@ body.header-fixed-padding {
 
 .contato h3 {
   font-size: 32px;
-  color: var(--primary-blue);
+  color: var(--primary-blue); 
   margin-bottom: 20px;
 }
 
@@ -218,17 +224,16 @@ body.header-fixed-padding {
 .footer {
   text-align: center;
   padding: 15px;
-  background: #e8f1ff;
+  background: #f0f8ff; 
   color: var(--text-color);
   margin-top: 30px;
 }
 
 /* --- MEDIA QUERIES (RESPONSIVIDADE) --- */
-/* Aplica-se a telas de tablets e smartphones (largura máxima de 768px) */
 @media (max-width: 768px) {
     /* HEADER (Menu para Celular) */
     .header {
-        flex-direction: column; /* Empilha logo e navegação */
+        flex-direction: column; 
         gap: 15px; 
     }
 
@@ -239,19 +244,19 @@ body.header-fixed-padding {
     }
 
     .header nav a {
-        margin: 5px 10px; /* Reduz a margem entre os links */
+        margin: 5px 10px; 
         font-size: 14px;
     }
     
     /* HERO */
     .hero {
-        height: auto; /* Altura automática para melhor ajuste */
+        height: auto;
         padding-top: 40px;
         padding-bottom: 40px;
     }
 
     .hero h2 {
-        font-size: 30px; /* Reduz o tamanho do título principal */
+        font-size: 30px;
     }
 
     .hero p {
@@ -264,7 +269,7 @@ body.header-fixed-padding {
     }
 
     .produtos, .sobre, .contato {
-         padding: 40px 15px; /* Reduz o padding lateral em telas pequenas */
+         padding: 40px 15px; 
     }
 
     /* WHATSAPP BUTTON */
@@ -278,10 +283,12 @@ body.header-fixed-padding {
 
 /* --- ANIMAÇÕES --- */
 .fade-up {
+  /* Animação inicial de baixo para cima */
   animation: fadeUp 0.8s ease forwards;
 }
 
 .fade-down {
+  /* Animação inicial de cima para baixo (usada no header) */
   animation: fadeDown 0.8s ease forwards;
 }
 
