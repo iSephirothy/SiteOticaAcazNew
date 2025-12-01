@@ -1,300 +1,201 @@
-/* GLOBAL */
-/* 1. VARIÁVEIS CSS (Design System) - NOVO AZUL E AMARELO VIBRANTES */
-:root {
-  /* Cores da Marca (Tons mais saturados e chamativos) */
-  --primary-blue: #0066ff; /* Azul mais elétrico e chamativo */
-  --dark-blue: #004de6;    /* Tom escuro para hover */
-  --light-blue: #e0f7ff;   /* Azul muito claro para fundos (mantido) */
-  --accent-yellow: #ffc107; /* Amarelo mais vivo e luminoso */
-  --bg-primary: #f2f7ff;
-  --bg-secondary: white;
-  --text-color: #333;
-
-  /* Espaçamento e Borda */
-  --padding-section: 60px 20px;
-  --border-radius: 10px;
+/*========= DESIGN SYSTEM =========*/
+:root{
+  --azul-royal: #0052f0;   /* vibrante */
+  --azul-royal-dark: #0039b5;
+  --amarelo-ouro: #ffcc00; /* vibrante */
+  --amarelo-ouro-dark: #e6b800;
+  --cinza-900: #111;
+  --cinza-100: #f5f7fa;
+  --radius: 12px;
+  --gap: 1.5rem;
+  --ff-base: 'Inter', sans-serif;
+  --ff-display: 'Playfair Display', serif;
+  --transition: .25s ease;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+/*========= RESET & BASE =========*/
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family: var(--ff-base);
+  background: var(--cinza-100);
+  color: var(--cinza-900);
+  line-height: 1.6;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+/*========= UTILITÁRIOS =========*/
+.highlight{
+  color: var(--amarelo-ouro);
+  font-weight: 700;
 }
 
-body {
-  background: var(--bg-primary);
-  color: var(--text-color);
-  scroll-behavior: smooth;
-}
-
-/* Ajuste para o header fixo */
-body.header-fixed-padding {
-  padding-top: 85px; 
-}
-
-
-/* HEADER */
-.header {
-  width: 100%;
-  background: var(--bg-secondary);
-  padding: 20px;
+/*========= HEADER =========*/
+.header{
+  position: fixed;
+  inset: 0 0 auto 0;
+  background: rgba(255,255,255,.85);
+  backdrop-filter: blur(8px);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  /* DESCOMENTE AS LINHAS ABAIXO se quiser o HEADER FIXO no topo */
-  /*
-  position: fixed; 
-  top: 0;
-  left: 0;
+  justify-content: space-between;
+  padding: 1rem 2rem;
   z-index: 1000;
-  */
+  border-bottom: 1px solid rgba(0,0,0,.05);
 }
-
-.header nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: var(--primary-blue);
-  font-weight: bold;
-  transition: color 0.3s;
+.logo{
+  font-family: var(--ff-display);
+  font-size: 1.75rem;
+  color: var(--azul-royal);
 }
-
-.header nav a:hover {
-  color: var(--dark-blue);
+nav a{
+  margin-left: 1.5rem;
+  font-weight: 600;
+  color: var(--cinza-900);
+  transition: color var(--transition);
 }
+nav a:hover{color: var(--azul-royal)}
 
-.logo {
-  font-size: 24px;
-  color: var(--primary-blue);
-  font-weight: bold;
-}
+/* compensa altura do header fixo */
+.header-pad{padding-top: 90px}
 
-/* HERO */
-.hero {
-  height: 60vh;
-  text-align: center;
-  padding: var(--padding-section);
-  background: linear-gradient(var(--light-blue), white); 
+/*========= HERO =========*/
+.hero{
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, var(--azul-royal) 0%, #0066ff 100%);
+  color: #fff;
+}
+.hero h2{
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+}
+.hero p{
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
 }
 
-.hero h2 {
-  font-size: 40px;
-  color: var(--dark-blue); 
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 19px;
-  margin-bottom: 20px;
-  color: var(--text-color);
-}
-
-/* BUTTONS */
-.btn-yellow {
-  padding: 12px 25px;
-  background: var(--accent-yellow); /* NOVO AMARELO MAIS VIBRANTE */
-  color: #000;
-  font-weight: bold;
-  border-radius: var(--border-radius);
-  text-decoration: none;
+/*========= BUTTONS =========*/
+.btn-yellow{
   display: inline-block;
-  transition: opacity 0.3s;
+  padding: .85rem 2rem;
+  background: var(--amarelo-ouro);
+  color: var(--cinza-900);
+  font-weight: 700;
+  border-radius: var(--radius);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.btn-yellow:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.15);
 }
 
-.btn-yellow:hover {
-  opacity: 0.9; /* Pequeno escurecimento no hover */
-}
-
-.btn-blue {
-  padding: 10px 20px;
-  background: var(--primary-blue); /* NOVO AZUL VIBRANTE */
-  color: white;
+.btn-blue{
+  padding: .65rem 1.5rem;
+  background: var(--azul-royal);
+  color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius);
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background var(--transition);
 }
+.btn-blue:hover{background: var(--azul-royal-dark)}
 
-.btn-blue:hover {
-  background: var(--dark-blue); 
-}
-
-/* PRODUTOS */
-.produtos {
-  padding: var(--padding-section);
-  background: var(--bg-secondary);
-}
-
-.produtos h3 {
+/*========= PRODUTOS =========*/
+.produtos{padding: 4rem 1rem}
+.produtos h3{
+  font-family: var(--ff-display);
+  font-size: 2rem;
   text-align: center;
-  color: var(--primary-blue); 
-  font-size: 32px;
-  margin-bottom: 30px;
+  margin-bottom: 2.5rem;
+  color: var(--azul-royal);
 }
-
-.grid {
+.grid{
   display: grid;
-  gap: 20px;
+  gap: var(--gap);
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: 1100px;
+  margin: auto;
 }
-
-.card {
-  background: #f0f8ff; 
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+.card{
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,.06);
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
 }
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,.1);
 }
-
-.card .img-produto {
-  height: 150px;
+.img-produto{
+  height: 160px;
   width: 100%;
-  object-fit: cover; 
-  background: var(--light-blue); 
-  border-radius: var(--border-radius);
-  margin-bottom: 15px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: var(--cinza-100);
 }
+.card h4{font-weight: 700}
+.card p{flex: 1}
 
-/* SOBRE */
-.sobre {
-  padding: var(--padding-section);
+/*========= SOBRE / CONTATO =========*/
+.sobre, .contato{
+  padding: 4rem 1rem;
   text-align: center;
+  max-width: 800px;
+  margin: auto;
 }
-
-.sobre h3 {
-  font-size: 32px;
-  color: var(--primary-blue); 
-  margin-bottom: 20px;
+.sobre h3, .contato h3{
+  font-family: var(--ff-display);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--azul-royal);
 }
+.contato a:hover{color: var(--azul-royal)}
 
-.contato {
-  padding: var(--padding-section);
-  text-align: center;
-}
-
-.contato h3 {
-  font-size: 32px;
-  color: var(--primary-blue); 
-  margin-bottom: 20px;
-}
-
-.contato p {
-    margin-bottom: 8px;
-}
-
-.contato a {
-    color: var(--text-color);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contato a:hover {
-    color: var(--primary-blue);
-}
-
-/* WHATSAPP FLOATING BUTTON */
-.whatsapp-button {
+/*========= WHATSAPP FLOAT =========*/
+.whatsapp-button{
   position: fixed;
-  bottom: 25px;
-  right: 25px;
+  bottom: 1.5rem;
+  right: 1.5rem;
   background: #25D366;
-  color: white;
-  font-size: 28px;
-  padding: 15px;
+  color: #fff;
+  font-size: 1.75rem;
+  width: 3.5rem;
+  height: 3.5rem;
   border-radius: 50%;
-  text-decoration: none;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  animation: bounce 1.5s infinite;
-  z-index: 999;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
+  transition: transform var(--transition);
 }
+.whatsapp-button:hover{transform: scale(1.1)}
 
-/* FOOTER */
-.footer {
+/*========= FOOTER =========*/
+.footer{
   text-align: center;
-  padding: 15px;
-  background: #f0f8ff; 
-  color: var(--text-color);
-  margin-top: 30px;
+  padding: 1.5rem;
+  font-size: .875rem;
+  color: var(--cinza-900);
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,.05);
 }
 
-/* --- MEDIA QUERIES (RESPONSIVIDADE) --- */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column; 
-        gap: 15px; 
-    }
-
-    .header nav {
-        display: flex;
-        flex-wrap: wrap; 
-        justify-content: center;
-    }
-
-    .header nav a {
-        margin: 5px 10px; 
-        font-size: 14px;
-    }
-    
-    .hero {
-        height: auto;
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
-    .hero h2 {
-        font-size: 30px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .produtos h3, .sobre h3, .contato h3 {
-        font-size: 28px;
-    }
-
-    .produtos, .sobre, .contato {
-         padding: 40px 15px; 
-    }
-
-    .whatsapp-button {
-        bottom: 15px;
-        right: 15px;
-        font-size: 24px;
-        padding: 12px;
-    }
-}
-
-/* --- ANIMAÇÕES --- */
-.fade-up {
-  animation: fadeUp 0.8s ease forwards;
-}
-
-.fade-down {
-  animation: fadeDown 0.8s ease forwards;
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+/*========= RESPONSIVO =========*/
+@media (max-width: 600px){
+  .header{flex-direction: column; gap: .75rem}
+  nav a{margin: 0 .5rem}
+  .hero h2{font-size: 2rem}
 }
