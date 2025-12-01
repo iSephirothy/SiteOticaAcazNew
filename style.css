@@ -26,9 +26,15 @@ img{max-width:100%;display:block}
 a{text-decoration:none;color:inherit}
 
 /*========= UTILITÁRIOS =========*/
-.highlight{
+.highlight, .acaz{
   color: var(--amarelo-ouro);
   font-weight: 700;
+}
+.logo{
+  font-family: var(--ff-display);
+  font-size: 1.75rem;
+  color: var(--azul-royal);
+  text-transform: uppercase;
 }
 
 /*========= HEADER =========*/
@@ -44,11 +50,6 @@ a{text-decoration:none;color:inherit}
   z-index: 1000;
   border-bottom: 1px solid rgba(0,0,0,.05);
 }
-.logo{
-  font-family: var(--ff-display);
-  font-size: 1.75rem;
-  color: var(--azul-royal);
-}
 nav a{
   margin-left: 1.5rem;
   font-weight: 600;
@@ -57,7 +58,6 @@ nav a{
 }
 nav a:hover{color: var(--azul-royal)}
 
-/* compensa altura do header fixo */
 .header-pad{padding-top: 90px}
 
 /*========= HERO =========*/
@@ -97,7 +97,6 @@ nav a:hover{color: var(--azul-royal)}
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,.15);
 }
-
 .btn-blue{
   padding: .65rem 1.5rem;
   background: var(--azul-royal);
@@ -188,7 +187,7 @@ nav a:hover{color: var(--azul-royal)}
 }
 .contato a:hover{color: var(--azul-royal)}
 
-/*========= DEPOIMENTOS (CARROSSEL) =========*/
+/*========= DEPOIMENTOS =========*/
 .depoimentos{
   padding:4rem 1rem;
   text-align:center;
@@ -222,9 +221,9 @@ nav a:hover{color: var(--azul-royal)}
   font-style:italic;
   margin-bottom:.5rem;
 }
-cite{
+.autor-amarelo{
   font-weight:700;
-  color:var(--azul-royal);
+  color:var(--amarelo-ouro);
 }
 @keyframes slide{
   0%, 27%   {transform:translateX(0)}
@@ -251,7 +250,7 @@ cite{
 }
 .whatsapp-button:hover{transform: scale(1.1)}
 
-/*========= FOOTER + REDES SOCIAIS =========*/
+/*========= FOOTER + REDES =========*/
 .footer{
   text-align: center;
   padding: 1.5rem;
