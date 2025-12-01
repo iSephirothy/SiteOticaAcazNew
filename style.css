@@ -1,4 +1,20 @@
 /* GLOBAL */
+/* 1. VARIÁVEIS CSS (Design System) */
+:root {
+  /* Cores da Marca */
+  --primary-blue: #0054a6;
+  --dark-blue: #004a94;
+  --light-blue: #c6e2ff; 
+  --accent-yellow: #ffcc00;
+  --bg-primary: #f2f7ff;
+  --bg-secondary: white;
+  --text-color: #333;
+
+  /* Espaçamento e Borda */
+  --padding-section: 60px 20px;
+  --border-radius: 10px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,32 +23,48 @@
 }
 
 body {
-  background: #f2f7ff;
-  color: #333;
+  background: var(--bg-primary);
+  color: var(--text-color);
   scroll-behavior: smooth;
 }
+
+/* Ajuste para o header fixo: Adicione padding ao body para o conteúdo não ser escondido */
+body.header-fixed-padding {
+  padding-top: 85px; /* Ajuste este valor se a altura do header mudar */
+}
+
 
 /* HEADER */
 .header {
   width: 100%;
-  background: white;
+  background: var(--bg-secondary);
   padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  /* Se for fixo, descomente as linhas abaixo no CSS e adicione a classe no HTML */
+  /* position: fixed; 
+  top: 0;
+  left: 0;
+  z-index: 1000; */
 }
 
 .header nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: #0054a6;
+  color: var(--primary-blue);
   font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header nav a:hover {
+  color: var(--dark-blue);
 }
 
 .logo {
   font-size: 24px;
-  color: #0054a6;
+  color: var(--primary-blue);
   font-weight: bold;
 }
 
@@ -40,8 +72,8 @@ body {
 .hero {
   height: 60vh;
   text-align: center;
-  padding: 40px;
-  background: linear-gradient(#c6e2ff, white);
+  padding: var(--padding-section);
+  background: linear-gradient(var(--light-blue), white);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,45 +81,55 @@ body {
 
 .hero h2 {
   font-size: 40px;
-  color: #004a94;
+  color: var(--dark-blue);
   margin-bottom: 10px;
 }
 
 .hero p {
   font-size: 19px;
   margin-bottom: 20px;
-  color: #333;
+  color: var(--text-color);
 }
 
 /* BUTTONS */
 .btn-yellow {
   padding: 12px 25px;
-  background: #ffcc00;
+  background: var(--accent-yellow);
   color: #000;
   font-weight: bold;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   text-decoration: none;
   display: inline-block;
+  transition: opacity 0.3s;
+}
+
+.btn-yellow:hover {
+  opacity: 0.8;
 }
 
 .btn-blue {
   padding: 10px 20px;
-  background: #0054a6;
+  background: var(--primary-blue);
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-blue:hover {
+  background: var(--dark-blue);
 }
 
 /* PRODUTOS */
 .produtos {
-  padding: 60px 20px;
-  background: white;
+  padding: var(--padding-section);
+  background: var(--bg-secondary);
 }
 
 .produtos h3 {
   text-align: center;
-  color: #0054a6;
+  color: var(--primary-blue);
   font-size: 32px;
   margin-bottom: 30px;
 }
@@ -99,12 +141,12 @@ body {
 }
 
 .card {
-  background: #e6f0ff;
+  background: #e6f0ff; /* Manteve a cor azul clara do card */
   border-radius: 15px;
   padding: 20px;
   text-align: center;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  transition: 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
@@ -112,34 +154,48 @@ body {
   box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-.img {
+.card .img { /* Mantive a classe .img, mas você deve usar <img> */
   height: 150px;
   background: #b5cfff;
-  border-radius: 10px;
+  border-radius: var(--border-radius);
   margin-bottom: 15px;
 }
 
 /* SOBRE */
 .sobre {
-  padding: 60px 20px;
+  padding: var(--padding-section);
   text-align: center;
 }
 
 .sobre h3 {
   font-size: 32px;
-  color: #0054a6;
+  color: var(--primary-blue);
   margin-bottom: 20px;
 }
 
 .contato {
-  padding: 60px 20px;
+  padding: var(--padding-section);
   text-align: center;
 }
 
 .contato h3 {
   font-size: 32px;
-  color: #0054a6;
+  color: var(--primary-blue);
   margin-bottom: 20px;
+}
+
+.contato p {
+    margin-bottom: 8px;
+}
+
+.contato a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contato a:hover {
+    color: var(--primary-blue);
 }
 
 /* WHATSAPP FLOATING BUTTON */
@@ -155,9 +211,72 @@ body {
   text-decoration: none;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
   animation: bounce 1.5s infinite;
+  z-index: 999;
 }
 
-/* ANIMAÇÕES */
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #e8f1ff;
+  color: var(--text-color);
+  margin-top: 30px;
+}
+
+/* --- MEDIA QUERIES (RESPONSIVIDADE) --- */
+/* Aplica-se a telas de tablets e smartphones (largura máxima de 768px) */
+@media (max-width: 768px) {
+    /* HEADER (Menu para Celular) */
+    .header {
+        flex-direction: column; /* Empilha logo e navegação */
+        gap: 15px; 
+    }
+
+    .header nav {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .header nav a {
+        margin: 5px 10px; /* Reduz a margem entre os links */
+        font-size: 14px;
+    }
+    
+    /* HERO */
+    .hero {
+        height: auto; /* Altura automática para melhor ajuste */
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .hero h2 {
+        font-size: 30px; /* Reduz o tamanho do título principal */
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    /* SEÇÕES GERAIS */
+    .produtos h3, .sobre h3, .contato h3 {
+        font-size: 28px;
+    }
+
+    .produtos, .sobre, .contato {
+         padding: 40px 15px; /* Reduz o padding lateral em telas pequenas */
+    }
+
+    /* WHATSAPP BUTTON */
+    .whatsapp-button {
+        bottom: 15px;
+        right: 15px;
+        font-size: 24px;
+        padding: 12px;
+    }
+}
+
+/* --- ANIMAÇÕES --- */
 .fade-up {
   animation: fadeUp 0.8s ease forwards;
 }
@@ -179,13 +298,4 @@ body {
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
-}
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 15px;
-  background: #e8f1ff;
-  color: #333;
-  margin-top: 30px;
 }
